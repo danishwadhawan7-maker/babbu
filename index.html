@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavnoor Singh | 5'4" of Pure Power & Tech Portfolio</title>
+    <meta name="description" content="Portfolio of Bhavnoor Singh - The 5'4\" powerhouse. Creative developer, designer, and proud Sardar specializing in high-impact digital experiences.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-blue">
+    <!-- Ambient Background Effects -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">B</span>
+                <span class="logo-text">Bhavnoor<span class="dot">.</span></span>
+            </a>
+            <nav class="nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#height-meter" class="nav-link">Height-O-Meter</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="btn btn-nav">Get In Touch</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-container">
+                        <span class="hero-badge"><i class="fa-solid fa-crown"></i> Compact Powerhouse</span>
+                        <span class="hero-badge height-badge">5ft 4in (162 cm)</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Small Stature.<br>
+                        <span class="text-gradient">Colossal Impact.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        I'm <strong>Bhavnoor Singh</strong>, a proud Sardar and creative engineer. While my physical height sits at a solid 5'4", my vision, designs, and code scale beyond the clouds. Let's build something epic!
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Explore Work</a>
+                        <a href="#height-meter" class="btn btn-secondary">Size Comparison</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <!-- Dynamic Turban & Sardar Vector Art Container -->
+                    <div class="avatar-card glass-card">
+                        <!-- View Toggle -->
+                        <div class="avatar-toggle">
+                            <button class="toggle-btn active" data-view="vector">Vector Crown</button>
+                            <button class="toggle-btn" data-view="photo">Real Swag</button>
+                        </div>
+                        
+                        <div class="avatar-wrapper">
+                            <!-- SVG Sardar Avatar with Dynamic Colors based on CSS variables -->
+                            <svg id="vector-avatar" class="sardar-svg active" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <!-- Gradients for different parts -->
+                                    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ffd59a" />
+                                        <stop offset="100%" stop-color="#f3a971" />
+                                    </linearGradient>
+                                    <linearGradient id="turbanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="var(--accent-primary)" />
+                                        <stop offset="100%" stop-color="var(--accent-secondary)" />
+                                    </linearGradient>
+                                    <linearGradient id="beardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#1e293b" />
+                                        <stop offset="100%" stop-color="#0f172a" />
+                                    </linearGradient>
+                                    <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="8" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                </defs>
+                                
+                                <!-- Background Aura -->
+                                <circle cx="200" cy="200" r="160" fill="url(#turbanGrad)" opacity="0.1" />
+                                <circle cx="200" cy="200" r="140" fill="none" stroke="url(#turbanGrad)" stroke-width="2" stroke-dasharray="8 6" opacity="0.4" class="rotating-ring" />
+                                
+                                <!-- Ears -->
+                                <circle cx="110" cy="210" r="18" fill="url(#skinGrad)" />
+                                <circle cx="290" cy="210" r="18" fill="url(#skinGrad)" />
+                                
+                                <!-- Face -->
+                                <path d="M 120,180 Q 120,270 200,280 Q 280,270 280,180 Z" fill="url(#skinGrad)" />
+                                
+                                <!-- Eyes & Brows -->
+                                <path d="M 145,175 Q 160,168 175,175" stroke="#000" stroke-width="4" stroke-linecap="round" fill="none" />
+                                <path d="M 225,175 Q 240,168 255,175" stroke="#000" stroke-width="4" stroke-linecap="round" fill="none" />
+                                <circle cx="160" cy="188" r="6" fill="#000" />
+                                <circle cx="240" cy="188" r="6" fill="#000" />
+                                <circle cx="158" cy="186" r="2" fill="#fff" />
+                                <circle cx="238" cy="186" r="2" fill="#fff" />
+                                
+                                <!-- Nose -->
+                                <path d="M 200,180 Q 192,210 200,215 Q 208,210 200,180" fill="#e29158" opacity="0.6" />
+                                
+                                <!-- Beard & Moustache (Sardar Identity) -->
+                                <path d="M 120,200 Q 120,330 200,340 Q 280,330 280,200 Q 250,230 200,230 Q 150,230 120,200 Z" fill="url(#beardGrad)" />
+                                <!-- Moustache -->
+                                <path d="M 165,222 Q 200,210 235,222 Q 200,230 165,222 Z" fill="#0c111d" />
+                                
+                                <!-- Lips -->
+                                <path d="M 188,242 Q 200,248 212,242" stroke="#e07a5f" stroke-width="3" stroke-linecap="round" fill="none" />
+                                
+                                <!-- Sardar Turban (Pagri) - Beautifully stylized & color-customizable -->
+                                <!-- Base fold 1 -->
+                                <path class="turban-part" d="M 120,170 Q 200,110 280,160 Q 275,110 200,90 Q 125,110 120,170 Z" fill="url(#turbanGrad)" />
+                                <!-- Fold 2 (Left overlap) -->
+                                <path class="turban-part" d="M 115,160 Q 210,85 270,115 Q 260,80 190,75 Q 125,85 115,160 Z" fill="url(#turbanGrad)" opacity="0.9" />
+                                <!-- Fold 3 (Right overlap) -->
+                                <path class="turban-part" d="M 130,120 Q 190,65 285,125 Q 280,75 200,65 Q 140,75 130,120 Z" fill="url(#turbanGrad)" opacity="0.95" />
+                                <!-- Main center crown (Pug) -->
+                                <path class="turban-part" d="M 140,110 Q 200,45 260,85 Q 265,55 200,50 Q 145,55 140,110 Z" fill="url(#turbanGrad)" />
+                                <!-- Fifty (Band at forehead) -->
+                                <path class="fifty-band" d="M 150,150 L 250,150 L 235,162 L 165,162 Z" fill="var(--fifty-color, #ffffff)" />
+                                <!-- Kara / Turban ornament detail (Chakra icon or button style) -->
+                                <circle cx="200" cy="115" r="8" fill="#ffd700" filter="url(#glow-effect)" />
+                            </svg>
+                            
+                            <!-- Real Photo container -->
+                            <div id="photo-avatar" class="photo-avatar-container">
+                                <img src="bhavnoor.jpg" alt="Bhavnoor Singh" class="real-avatar-img">
+                                <div class="photo-overlay-glow"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dynamic Color Customizer Widget -->
+                        <div class="turban-customizer">
+                            <span class="customizer-title">Style His Turban (Theme Selector)</span>
+                            <div class="theme-buttons">
+                                <button class="theme-btn active" data-theme="blue" style="--btn-color: #2563eb;" title="Royal Patiala Blue">
+                                    <span class="btn-inner"></span>
+                                </button>
+                                <button class="theme-btn" data-theme="gold" style="--btn-color: #f59e0b;" title="Kesri Gold">
+                                    <span class="btn-inner"></span>
+                                </button>
+                                <button class="theme-btn" data-theme="emerald" style="--btn-color: #10b981;" title="Emerald Green">
+                                    <span class="btn-inner"></span>
+                                </button>
+                                <button class="theme-btn" data-theme="ruby" style="--btn-color: #ef4444;" title="Ruby Red">
+                                    <span class="btn-inner"></span>
+                                </button>
+                                <button class="theme-btn" data-theme="basanti" style="--btn-color: #eab308;" title="Basanti Yellow">
+                                    <span class="btn-inner"></span>
+                                </button>
+                                <button class="theme-btn" data-theme="black" style="--btn-color: #1e293b;" title="Sleek Black">
+                                    <span class="btn-inner"></span>
+                                </button>
+                            </div>
+                            <div class="fifty-customizer">
+                                <span class="customizer-subtext">Fifty (Forehead Band) Color:</span>
+                                <div class="fifty-buttons">
+                                    <button class="fifty-btn active" data-color="#ffffff" style="background: #ffffff;"></button>
+                                    <button class="fifty-btn" data-color="#000000" style="background: #000000;"></button>
+                                    <button class="fifty-btn" data-color="#ff007f" style="background: #ff007f;"></button>
+                                    <button class="fifty-btn" data-color="#ffcc00" style="background: #ffcc00;"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid / About & Stats Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Inside The Mind</span>
+                    <h2 class="section-title">The Bento Bio</h2>
+                    <p class="section-subtitle">Packed with energy, humor, and hardcore tech skills. Let's break down the stats.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Card 1: Core Bio -->
+                    <div class="bento-card card-lg glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-address-card"></i></div>
+                        <h3>Who is Bhavnoor?</h3>
+                        <p>A multi-disciplinary tech ninja who believes height is just a number, but output is everything. When you're 5'4", you don't waste energy on reaching top shelves—you spend it writing optimized code, designing pixel-perfect interfaces, and scaling servers. Proud of his rich Sardar heritage, Bhavnoor blends tradition with future-facing technology.</p>
+                        <div class="quote-box">
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">A shorter center of gravity makes me harder to knock over. Perfect for high-pressure deployments.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Skill Grid -->
+                    <div class="bento-card card-md glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3>Tech Armory</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Frontend Engineering (HTML/CSS/JS)</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Responsive UI/UX Design</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Backend Integrations</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Micro-Animations & SVG</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Interactive Dynamic Fun Stats -->
+                    <div class="bento-card card-sm glass-card stat-card">
+                        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Energy Coefficient (%)</div>
+                        <p class="stat-desc">Highly concentrated energy output per square foot.</p>
+                    </div>
+
+                    <div class="bento-card card-sm glass-card stat-card">
+                        <div class="card-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                        <div class="stat-number" data-target="742">0</div>
+                        <div class="stat-label">Coffees Brewed</div>
+                        <p class="stat-desc">Fueling high-performance builds day and night.</p>
+                    </div>
+
+                    <!-- Card 5: Sardar Heritage Info -->
+                    <div class="bento-card card-md glass-card sikh-heritage-card">
+                        <div class="card-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+                        <h3>Sardar Values</h3>
+                        <p>Draped in a crown (Turban/Dastaar), Bhavnoor lives by the core principles of <strong>Chardi Kala</strong> (eternal optimism) and <strong>Sewa</strong> (selfless service). Bringing respect, integrity, and relentless optimism to every engineering team he joins.</p>
+                        <div class="heritage-badges">
+                            <span class="heritage-badge"><i class="fa-solid fa-handshake"></i> Integrity</span>
+                            <span class="heritage-badge"><i class="fa-solid fa-face-smile-beam"></i> Chardi Kala</span>
+                            <span class="heritage-badge"><i class="fa-solid fa-fire"></i> Relentless Drive</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Bhangra / Dance Maniac Card (Wide layout: spans 2 columns, 1 row) -->
+                    <div class="bento-card card-wide glass-card dance-card">
+                        <div class="dance-card-content">
+                            <div class="card-icon"><i class="fa-solid fa-compact-disc"></i></div>
+                            <div>
+                                <h3>Dance Maniac</h3>
+                                <p>Blending the logic of code with the vibrant steps of Bhangra. Follow his high-energy Punjabi dance reels and choreography on Instagram!</p>
+                            </div>
+                        </div>
+                        <div class="dance-instagram-wrapper">
+                            <a href="https://instagram.com/bhavi_dance_maniac" target="_blank" class="instagram-profile-card">
+                                <span class="insta-avatar">
+                                    <img src="bhavnoor.jpg" alt="bhavi_dance_maniac" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=80&h=80';">
+                                </span>
+                                <div class="insta-details">
+                                    <span class="insta-name">Bhavnoor Singh</span>
+                                    <span class="insta-handle">@bhavi_dance_maniac</span>
+                                    <span class="insta-badge-count"><i class="fa-solid fa-video"></i> Bhangra Reels</span>
+                                </div>
+                                <span class="insta-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Height-O-Meter Interactive Section -->
+        <section class="height-meter-section" id="height-meter">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Interactive Fun</span>
+                    <h2 class="section-title">The Height-O-Meter</h2>
+                    <p class="section-subtitle">How tall is 5 feet 4 inches? Let's benchmark Bhavnoor's height against standard items in the tech & real world!</p>
+                </div>
+
+                <div class="meter-playground glass-card">
+                    <div class="playground-layout">
+                        <!-- Controls for switching comparison object -->
+                        <div class="comparison-selectors">
+                            <h3>Choose Comparison Object:</h3>
+                            <button class="selector-btn active" data-compare="cup">
+                                <span class="icon"><i class="fa-solid fa-mug-hot"></i></span>
+                                <span class="label">Coffee Cups</span>
+                            </button>
+                            <button class="selector-btn" data-compare="laptop">
+                                <span class="icon"><i class="fa-solid fa-laptop"></i></span>
+                                <span class="label">Stacked MacBooks</span>
+                            </button>
+                            <button class="selector-btn" data-compare="guitar">
+                                <span class="icon"><i class="fa-solid fa-guitar"></i></span>
+                                <span class="label">Electric Guitars</span>
+                            </button>
+                            <button class="selector-btn" data-compare="burj">
+                                <span class="icon"><i class="fa-solid fa-building"></i></span>
+                                <span class="label">Burj Khalifa</span>
+                            </button>
+                            <button class="selector-btn" data-compare="dhol">
+                                <span class="icon"><i class="fa-solid fa-drum"></i></span>
+                                <span class="label">Traditional Dhols</span>
+                            </button>
+                            <button class="selector-btn" data-compare="ego">
+                                <span class="icon"><i class="fa-solid fa-brain"></i></span>
+                                <span class="label">Average Developer's Ego</span>
+                            </button>
+                        </div>
+
+                        <!-- Visual Area showing dynamic SVGs stacking up -->
+                        <div class="comparison-viewport">
+                            <div class="comparison-canvas">
+                                <!-- Scale Line -->
+                                <div class="scale-line">
+                                    <span class="scale-label top">5' 4" (162 cm)</span>
+                                    <span class="scale-label bottom">0" (0 cm)</span>
+                                </div>
+
+                                <!-- Bhavnoor avatar representation -->
+                                <div class="bhavnoor-silhouete">
+                                    <div class="silhouete-wrapper">
+                                        <!-- Miniature SVG Avatar -->
+                                        <svg class="silhouete-svg" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="30" r="15" fill="var(--accent-primary)" />
+                                            <!-- stylized turban on silhouette -->
+                                            <path d="M 38 24 Q 50 10 62 20 Q 60 5 50 2 Q 40 5 38 24 Z" fill="var(--accent-secondary)" />
+                                            <!-- beard on silhouette -->
+                                            <path d="M 40 32 Q 50 55 60 32 Z" fill="#1e293b" />
+                                            <!-- body -->
+                                            <path d="M 30,55 L 70,55 L 75,120 L 25,120 Z" fill="var(--accent-primary)" opacity="0.8" />
+                                            <!-- legs -->
+                                            <rect x="35" y="120" width="10" height="80" fill="#1e293b" />
+                                            <rect x="55" y="120" width="10" height="80" fill="#1e293b" />
+                                        </svg>
+                                    </div>
+                                    <span class="avatar-label">Bhavnoor (5'4")</span>
+                                </div>
+
+                                <!-- Comparison items container -->
+                                <div class="stack-container" id="items-stack">
+                                    <!-- Populated dynamically via JS -->
+                                </div>
+                            </div>
+
+                            <!-- Dynamic text describing the comparison -->
+                            <div class="comparison-caption-box">
+                                <div class="comparison-math">
+                                    <span id="math-number">16.2</span> <span id="math-units">Cups</span>
+                                </div>
+                                <p id="comparison-text">Bhavnoor is approximately 16.2 standard coffee cups stacked head-to-toe. Extremely caffeinated height representation!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Portfolio Section -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Featured Works</span>
+                    <h2 class="section-title">Compact Code, Grand Ideas</h2>
+                    <p class="section-subtitle">A collection of custom applications built with performance, beauty, and utility in mind.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-fallback grad-blue">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <span class="project-category">AI Integration</span>
+                        </div>
+                        <div class="project-details">
+                            <h3>BhavnAI: Smart Helper</h3>
+                            <p>An intelligent agent orchestration platform that simplifies complex prompt pipelines and runs automated testing suites.</p>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">OpenAI API</span>
+                                <span class="tag">WebSockets</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fa-solid fa-code"></i> Code</a>
+                                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-fallback grad-gold">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <span class="project-category">UI System</span>
+                        </div>
+                        <div class="project-details">
+                            <h3>SardarSwag UI</h3>
+                            <p>A component design system featuring gorgeous glassmorphic web elements themed with royal heritage color schemes.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS variables</span>
+                                <span class="tag">Framer Motion</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fa-solid fa-code"></i> Code</a>
+                                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-fallback grad-emerald">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </div>
+                            <span class="project-category">Interactive Game</span>
+                        </div>
+                        <div class="project-details">
+                            <h3>Ludhiana Loop</h3>
+                            <p>A fast-paced SVG retro arcade game built with vanilla JS, featuring dynamic physics and custom-drawn cultural sprite-sheets.</p>
+                            <div class="project-tags">
+                                <span class="tag">Vanilla JS</span>
+                                <span class="tag">HTML Canvas</span>
+                                <span class="tag">SVG Animation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fa-solid fa-code"></i> Code</a>
+                                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Say Hello</span>
+                    <h2 class="section-title">Start a Gigantic Project</h2>
+                    <p class="section-subtitle">Got an idea? Or just want to check if the height stats are real? Reach out and let's grab some chai!</p>
+                </div>
+
+                <div class="contact-layout glass-card">
+                    <div class="contact-info">
+                        <h3>Contact Info</h3>
+                        <p class="contact-info-desc">Feel free to connect on social media or send an email directly using the secure contact form.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                <div class="detail">
+                                    <span class="label">Email</span>
+                                    <span class="value">bhavnoor.singh@example.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <div class="detail">
+                                    <span class="label">Location</span>
+                                    <span class="value">Punjab, India</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="icon"><i class="fa-solid fa-ruler-vertical"></i></span>
+                                <div class="detail">
+                                    <span class="label">Height Profile</span>
+                                    <span class="value">5ft 4in | 64 inches | 162.5 cm</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form class="contact-form" id="portfolio-contact-form">
+                        <div class="form-group">
+                            <label for="user-name">Your Name</label>
+                            <input type="text" id="user-name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-email">Your Email</label>
+                            <input type="email" id="user-email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-message">Your Message</label>
+                            <textarea id="user-message" name="message" rows="5" required placeholder="Hey Bhavnoor! Let's build a cool app..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div class="form-feedback" id="form-feedback-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Bhavnoor Singh. All rights reserved. Powered by ambition, turbans, and code.</p>
+            <div class="footer-links">
+                <a href="#hero">Back to Top</a>
+                <span class="divider">|</span>
+                <span>Designed at 5'4" Scale</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS Script -->
+    <script src="script.js"></script>
+</body>
+</html>
